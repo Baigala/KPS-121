@@ -69,18 +69,65 @@ talbai = PiToo * r * r;
 // } else {
 //   console.log("nasaa buruu oruulsan bna.");
 // }
-var mergejil = "togooch";
-if (mergejil === "togooch" || mergejil === "jolooch") {
-  console.log("ajild awna.");
-}
+// var mergejil = "togooch";
+// if (mergejil === "togooch" || mergejil === "jolooch") {
+//   console.log("ajild awna.");
+// }
 
 /* Дасгал №3:
 Гараас 2ш тоо өгөгдсөн ба, хэрэв тэдгээрийн үржвэр 1000-с их бол үржвэрийг хэвлэж, 1000-с бага бол нийлбэрийг хэвлэ. */
-
+// var too1 = +prompt("ehnii toog oruulna u");
+// var too2 = +prompt("2 dahi toog oruul");
+// var urjwer = too1 * too2;
+// if (urjwer > 1000) {
+//   console.log(urjwer);
+// } else {
+//   console.log(too1 + too2);
+// }
 /* Дасгал №4:
 Гурвалжны суурь болон өндөр өгөгдсөн бол тухайн гурвалжны талбайг ол.
 томьёо: (суурь*өндөр)/2
 */
-
+// var suuri = +prompt("suuriig oruulna uu?");
+// var ondor = +prompt("gurwaljnii ondriig oruulna u");
+// var talbai = (suuri * ondor) / 2;
+// console.log(talbai);
 /* Дасгал №5:
 Гараас тоо аваад тэгш, сондгой эсэхийг нь шалгадаг програм бич. */
+// var too = +prompt("toog oruul");
+// if (too % 2 === 0) {
+//   console.log("tegsh too");
+// } else {
+//   console.log("sondgoi");
+// }
+
+// for dawtalt
+var x = 5;
+x = x + 4;
+x += 4;
+x -= 3;
+x *= 2;
+x -= 15;
+
+x = x + 1;
+x += 1;
+x++;
+x--;
+
+// console.log(1);
+// console.log(2);
+// console.log(3);
+// console.log(4);
+// console.log(5);
+for (var too = 1; too <= 5; too++) {
+  console.log(too);
+}
+// 1 - 100 hurtel console deer hewle.
+for (var i = 1; i <= 100; i++) {
+  console.log("i iin utga " + i);
+}
+// 1 - 100 hurtelh tegsh toonuudiig hewle.
+
+/* 10 hurtelh toonii niilberiig hewle. */
+
+/* 10 хүртэл давталт хийж, тоо тус бүрийг өмнөх тооны нийлбэртэй консолд хэвлэнэ үү. */
