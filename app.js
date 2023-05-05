@@ -119,15 +119,42 @@ x--;
 // console.log(3);
 // console.log(4);
 // console.log(5);
-for (var too = 1; too <= 5; too++) {
-  console.log(too);
-}
+// for (var too = 1; too <= 5; too++) {
+//   console.log(too);
+// }
 // 1 - 100 hurtel console deer hewle.
-for (var i = 1; i <= 100; i++) {
-  console.log("i iin utga " + i);
-}
+// for (var i = 1; i <= 100; i++) {
+//   console.log("i iin utga " + i);
+// }
 // 1 - 100 hurtelh tegsh toonuudiig hewle.
-
+// for (var i = 1; i <= 100; i++) {
+//   if (i % 2 === 1) {
+//     console.log(i);
+//   }
+// }
 /* 10 hurtelh toonii niilberiig hewle. */
-
+// var sum = 0;
+// for (var i = 1; i <= 10; i++) {
+//   sum += i;
+// }
+// console.log(sum);
 /* 10 хүртэл давталт хийж, тоо тус бүрийг өмнөх тооны нийлбэртэй консолд хэвлэнэ үү. */
+// var sum1 = 0;
+// for (var i = 0; i <= 10; i++) {
+//   sum1 += i;
+//   console.log(i, sum1);
+// }
+
+// while dawtalt
+// var too = 1;
+// while (too <= 5) {
+//   console.log(too);
+//   too++;
+// }
+
+// do while dawtalt
+var too1 = 1;
+do {
+  console.log(too1);
+  too1++;
+} while (too1 >= 5);
