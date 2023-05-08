@@ -102,17 +102,17 @@ talbai = PiToo * r * r;
 // }
 
 // for dawtalt
-var x = 5;
-x = x + 4;
-x += 4;
-x -= 3;
-x *= 2;
-x -= 15;
+// var x = 5;
+// x = x + 4;
+// x += 4;
+// x -= 3;
+// x *= 2;
+// x -= 15;
 
-x = x + 1;
-x += 1;
-x++;
-x--;
+// x = x + 1;
+// x += 1;
+// x++;
+// x--;
 
 // console.log(1);
 // console.log(2);
@@ -153,8 +153,68 @@ x--;
 // }
 
 // do while dawtalt
-var too1 = 1;
-do {
-  console.log(too1);
-  too1++;
-} while (too1 >= 5);
+// var too1 = 1;
+// do {
+//   console.log(too1);
+//   too1++;
+// } while (too1 >= 5);
+
+// function void || return hdg.
+// function butets || function zarlah
+
+function nemeh1(num1, num2) {
+  console.log(num1 + num2);
+}
+
+function nemeh2(num1, num2) {
+  return num1 + num2;
+}
+
+// functionoo ajilluulah || functionoo duudah.
+console.log(nemeh2(3, 6) * 2);
+nemeh1(4, 6);
+nemeh1(3, 9);
+
+// var ner = "Baigal";
+// var mergejil = "marketing manager";
+// if (mergejil === "bagsh") {
+//   console.log(ner + " hool hdg.");
+// } else if (mergejil === "marketing manager") {
+//   console.log(ner + " poster hdg.");
+// } else if (mergejil === "togooch") {
+//   console.log(ner + " hool hdg.");
+// }
+
+// var name = "Gizmo";
+// var job = "manager";
+// if (job === "togooch") {
+//   console.log(name + " cooks.");
+// } else if (job === "manager") {
+//   console.log(name + " creates posters");
+// } else if (job === "bagsh") {
+//   console.log(name + " teaches lessons.");
+// }
+
+// functionii parameter || argument
+function mergejilShalgah(ner, mergejil) {
+  if (mergejil === "bagsh") {
+    console.log(ner + " hiceel zaadag.");
+  } else if (mergejil === "marketing manager") {
+    console.log(ner + " poster hdg.");
+  } else if (mergejil === "togooch") {
+    console.log(ner + " hool hdg.");
+  }
+}
+mergejilShalgah("Baigal", "togooch");
+mergejilShalgah("Zoloo", "bagsh");
+mergejilShalgah("Nomin", "marketing manager");
+
+// Гараас тоо аваад тэгш, сондгой эсэхийг нь шалгадаг програм бич.
+function shalgah(too) {
+  if (too % 2 === 0) {
+    return "tegsh";
+  } else {
+    return "sondgoi";
+  }
+}
+console.log(shalgah(10));
