@@ -279,14 +279,31 @@ function ex3(str) {
 ex3("asdfg");
 
 /* Дан boolean утгууд агуулсан массив өгөгдсөн бол, дотор нь нийт хэдэн ширхэг true утга байгааг олж буцаа. */
-function ex4(arr) {}
-ex4([true, false, false, true, true]);
+function ex4(arr) {
+  var countTrue = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === true) {
+      countTrue++;
+    }
+  }
+  return countTrue;
+}
+console.log(ex4([true, true, false, true, true]));
 
 /* Массив өгөдсөн бол element тус бүрийг харгалзах indexeer нь үржүүлж үржвэрүүдийн нийлбэрийг буцаа. */
-
-/* Массив дотор number болон string төрлийн тоонууд өгөгджээ. Зөвхөн number төрлийн тоонуудын нийлбэрийг олж буцаа. */
+function ex5(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum += i * arr[i];
+  }
+  return sum;
+}
+console.log(ex5([2, 3, 4, 2]));
 
 // Gert:
+/* Массив дотор number болон string төрлийн тоонууд өгөгджээ. Зөвхөн number төрлийн тоонуудын нийлбэрийг олж буцаа. */
+// [1, "1", 3, "4"]
+
 /* Массиваас element устгадаг функц бич. */
 
 /* Өгөгдсөн массив дотор сондгой element болгон сондгой index агуулж, тэгш index болгон тэгш утга агуулж байвал тухайн massiv нь онцгой массив болно. Хэрэв онцгой массив таарвал true эсрэг тохиолдолд false утга буцаа.
