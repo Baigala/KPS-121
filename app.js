@@ -162,18 +162,18 @@ talbai = PiToo * r * r;
 // function void || return hdg.
 // function butets || function zarlah
 
-function nemeh1(num1, num2) {
-  console.log(num1 + num2);
-}
+// function nemeh1(num1, num2) {
+//   console.log(num1 + num2);
+// }
 
-function nemeh2(num1, num2) {
-  return num1 + num2;
-}
+// function nemeh2(num1, num2) {
+//   return num1 + num2;
+// }
 
 // functionoo ajilluulah || functionoo duudah.
-console.log(nemeh2(3, 6) * 2);
-nemeh1(4, 6);
-nemeh1(3, 9);
+// console.log(nemeh2(3, 6) * 2);
+// nemeh1(4, 6);
+// nemeh1(3, 9);
 
 // var ner = "Baigal";
 // var mergejil = "marketing manager";
@@ -196,25 +196,101 @@ nemeh1(3, 9);
 // }
 
 // functionii parameter || argument
-function mergejilShalgah(ner, mergejil) {
-  if (mergejil === "bagsh") {
-    console.log(ner + " hiceel zaadag.");
-  } else if (mergejil === "marketing manager") {
-    console.log(ner + " poster hdg.");
-  } else if (mergejil === "togooch") {
-    console.log(ner + " hool hdg.");
-  }
-}
-mergejilShalgah("Baigal", "togooch");
-mergejilShalgah("Zoloo", "bagsh");
-mergejilShalgah("Nomin", "marketing manager");
+// function mergejilShalgah(ner, mergejil) {
+//   if (mergejil === "bagsh") {
+//     console.log(ner + " hiceel zaadag.");
+//   } else if (mergejil === "marketing manager") {
+//     console.log(ner + " poster hdg.");
+//   } else if (mergejil === "togooch") {
+//     console.log(ner + " hool hdg.");
+//   }
+// }
+
+// mergejilShalgah("Baigal", "togooch");
+// mergejilShalgah("Zoloo", "bagsh");
+// mergejilShalgah("Nomin", "marketing manager");
 
 // Гараас тоо аваад тэгш, сондгой эсэхийг нь шалгадаг програм бич.
-function shalgah(too) {
-  if (too % 2 === 0) {
-    return "tegsh";
+// function shalgah(too) {
+//   if (too % 2 === 0) {
+//     return "tegsh";
+//   } else {
+//     return "sondgoi";
+//   }
+// }
+// console.log(shalgah(10));
+
+/* array - массив */
+var too = [1, 2, 3, true, "bla", "aa"]; // hooson massiv
+// console.log(too);
+// massiv dotorh utguud ruu indexeer ni handana.
+too[0]; // 1 gsn element garch irne.
+// massiv dotor heden element bgaag ilerhiilne.
+too.length;
+// massiviin suulchiin elementiig awah.
+too[too.length - 1];
+// array-tai ajilladag functionuud.
+// push("nemeh zuil") - хамгийн сүүлд элемент нэмж өгнө.
+// pop() - хамгийн сүүлийн элементийг устгах.
+// shift() - хамгийн эхний элементийг устгах.
+// unshift(44) - хамгийн эхэнд элемент нэмэх.
+// splice() - тодорхой хэсгийг устгах. // cut
+// slice() - тодорхой хэсгийг тасдаж авна. // copy
+// reverse() - өгөгдлүүдийн байрлалыг урвуу болгоно.
+// join("юу залгаж нийлүүлэх") - массивын элементүүдийг хооронд нь стринг болгон нийлүүлнэ.
+// split("хаагуур салгах") - стринг өгөгдлийг салгаж массив болгоно;
+// arr.concat(залгах массив); - 2 массивыг хооронд нь залгаад шинэ массив үүсгэнэ.
+// massivaar dawtalt hiij uzeh.
+// for (var i = 0; i < too.length; i++) {
+//   console.log(too[i]);
+// }
+// функц ашиглан бодно.
+/* Өгөгдсөн массив дотроос 5-д хуваагддаг тоонуудын нийлбэрийг олж буцаа */
+function ex1(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 5 === 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+// console.log(ex1([1, 2, 15, 5, 10]));
+
+/* Өгөгдсөн массивын эхний болон сүүлийн элемент тэнцүү бол true, үгүй бол false буцаа */
+function ex2(arr) {
+  if (arr[0] === arr[arr.length - 1]) {
+    return true;
   } else {
-    return "sondgoi";
+    return false;
   }
 }
-console.log(shalgah(10));
+// console.log(ex2(["aa", 2, "aa"]));
+// console.log(ex2([6, 4, 3]));
+
+/* Гараас стринг өгөгдсөн бол тэгш индекс дээрх тэмдэгтүүдийг хэвлэх функц бич. */
+function ex3(str) {
+  for (var i = 0; i < str.length; i++) {
+    if (i % 2 === 0) {
+      console.log(str[i]);
+    }
+  }
+}
+ex3("asdfg");
+
+/* Дан boolean утгууд агуулсан массив өгөгдсөн бол, дотор нь нийт хэдэн ширхэг true утга байгааг олж буцаа. */
+function ex4(arr) {}
+ex4([true, false, false, true, true]);
+
+/* Массив өгөдсөн бол element тус бүрийг харгалзах indexeer нь үржүүлж үржвэрүүдийн нийлбэрийг буцаа. */
+
+/* Массив дотор number болон string төрлийн тоонууд өгөгджээ. Зөвхөн number төрлийн тоонуудын нийлбэрийг олж буцаа. */
+
+// Gert:
+/* Массиваас element устгадаг функц бич. */
+
+/* Өгөгдсөн массив дотор сондгой element болгон сондгой index агуулж, тэгш index болгон тэгш утга агуулж байвал тухайн massiv нь онцгой массив болно. Хэрэв онцгой массив таарвал true эсрэг тохиолдолд false утга буцаа.
+[4, 5, 2, 9, 2]; ==> онцгой массив */
+
+/* String төрлийн тоо өгөгджээ. Бүх тэгш цифрүүдийн нийлбэрийг сондгой цифрүүдийн нийлбэртэй харьцуулж тэгш цифрүүдийн нийлбэр их бол тэгш цифрүүдийн нийлбэр их байна харин сондгой цифрүүдийн нийлбэр нь их байвал сондгой цифрүүдийн нийлбэр нь их хэрвээ тэнцүү байвал цифрүүдийн нийлбэр тэнцүү байна гэсэн утга буцаа.
+string төрлийн тоо ==> "1258" */
