@@ -255,8 +255,7 @@ function ex1(arr) {
   }
   return sum;
 }
-// console.log(ex1([1, 2, 15, 5, 10]));
-
+console.log(ex1([1, 10]));
 /* Өгөгдсөн массивын эхний болон сүүлийн элемент тэнцүү бол true, үгүй бол false буцаа */
 function ex2(arr) {
   if (arr[0] === arr[arr.length - 1]) {
@@ -288,7 +287,7 @@ function ex4(arr) {
   }
   return countTrue;
 }
-console.log(ex4([true, true, false, true, true]));
+console.log(ex4([true, true, true, true, true]));
 
 /* Массив өгөдсөн бол element тус бүрийг харгалзах indexeer нь үржүүлж үржвэрүүдийн нийлбэрийг буцаа. */
 function ex5(arr) {
@@ -303,11 +302,50 @@ console.log(ex5([2, 3, 4, 2]));
 // Gert:
 /* Массив дотор number болон string төрлийн тоонууд өгөгджээ. Зөвхөн number төрлийн тоонуудын нийлбэрийг олж буцаа. */
 // [1, "1", 3, "4"]
+function ex6(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (typeof arr[i] == "number") {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+console.log(ex6([2, 4, 4, "6"]));
 
 /* Массиваас element устгадаг функц бич. */
+function ex7(arr, ustgahElement) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === ustgahElement) {
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
+}
+console.log(ex7([1, 2, 3, 4, "aa"], "aa"));
+/* String төрлийн тоо өгөгджээ. Бүх тэгш цифрүүдийн нийлбэрийг сондгой цифрүүдийн нийлбэртэй харьцуулж тэгш цифрүүдийн нийлбэр их бол тэгш цифрүүдийн нийлбэр их байна харин сондгой цифрүүдийн нийлбэр нь их байвал сондгой цифрүүдийн нийлбэр нь их хэрвээ тэнцүү байвал цифрүүдийн нийлбэр тэнцүү байна гэсэн утга буцаа.
+string төрлийн тоо ==> "1258" */
+function ex8(str) {
+  var tegshNiilber = 0;
+  var sondgoiNiilber = 0;
+  var hariu = "";
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] % 2 === 0) {
+      tegshNiilber += +str[i];
+    } else {
+      sondgoiNiilber += +str[i];
+    }
+  }
+  if (tegshNiilber > sondgoiNiilber) {
+    hariu = "tegsh tsifruudiin niilber ih";
+  } else if (sondgoiNiilber > tegshNiilber) {
+    hariu = "sondgoi niilber ih";
+  } else {
+    hariu = "tentsuu.";
+  }
+  return hariu;
+}
+console.log(ex8("3234"));
 
 /* Өгөгдсөн массив дотор сондгой element болгон сондгой index агуулж, тэгш index болгон тэгш утга агуулж байвал тухайн massiv нь онцгой массив болно. Хэрэв онцгой массив таарвал true эсрэг тохиолдолд false утга буцаа.
 [4, 5, 2, 9, 2]; ==> онцгой массив */
-
-/* String төрлийн тоо өгөгджээ. Бүх тэгш цифрүүдийн нийлбэрийг сондгой цифрүүдийн нийлбэртэй харьцуулж тэгш цифрүүдийн нийлбэр их бол тэгш цифрүүдийн нийлбэр их байна харин сондгой цифрүүдийн нийлбэр нь их байвал сондгой цифрүүдийн нийлбэр нь их хэрвээ тэнцүү байвал цифрүүдийн нийлбэр тэнцүү байна гэсэн утга буцаа.
-string төрлийн тоо ==> "1258" */
