@@ -349,3 +349,22 @@ console.log(ex8("3234"));
 
 /* Өгөгдсөн массив дотор сондгой element болгон сондгой index агуулж, тэгш index болгон тэгш утга агуулж байвал тухайн massiv нь онцгой массив болно. Хэрэв онцгой массив таарвал true эсрэг тохиолдолд false утга буцаа.
 [4, 5, 2, 9, 2]; ==> онцгой массив */
+function ex9(arr) {
+  var ontsgoiElement = 0;
+  var bool;
+  for (var i = 0; i < arr.length; i++) {
+    if (
+      (i % 2 === 0 && arr[i] % 2 === 0) ||
+      (i % 2 === 1 && arr[i] % 2 === 1)
+    ) {
+      ontsgoiElement++;
+    }
+  }
+  if (ontsgoiElement === arr.length) {
+    bool = true;
+  } else {
+    bool = false;
+  }
+  return bool;
+}
+console.log(ex9([1, 5, 2, 9, 2]));
