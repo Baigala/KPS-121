@@ -128,7 +128,7 @@ talbai = PiToo * r * r;
 // }
 // 1 - 100 hurtelh tegsh toonuudiig hewle.
 // for (var i = 1; i <= 100; i++) {
-//   if (i % 2 === 1) {
+//   if (i % 2 === 0) {
 //     console.log(i);
 //   }
 // }
@@ -178,7 +178,7 @@ talbai = PiToo * r * r;
 // var ner = "Baigal";
 // var mergejil = "marketing manager";
 // if (mergejil === "bagsh") {
-//   console.log(ner + " hool hdg.");
+//   console.log(ner + " hicel zaadag.");
 // } else if (mergejil === "marketing manager") {
 //   console.log(ner + " poster hdg.");
 // } else if (mergejil === "togooch") {
@@ -221,7 +221,7 @@ talbai = PiToo * r * r;
 // console.log(shalgah(10));
 
 /* array - массив */
-var too = [1, 2, 3, true, "bla", "aa"]; // hooson massiv
+var too = [1, 2, 3, true, "bla", "aa"];
 // console.log(too);
 // massiv dotorh utguud ruu indexeer ni handana.
 too[0]; // 1 gsn element garch irne.
@@ -369,7 +369,54 @@ function ex9(arr) {
 }
 console.log(ex9([1, 5, 2, 9, 2]));
 /* Гараас стринг өгөгдсөн бол сондгой индекс дээрх тэмдэгтүүдийг хэвлэх функц бич. */
+
 /* Massiv дотор хамгийн сүүлийн element-ээс бусад бүх утгуудыг нэгтгэж, хамгийн сүүлийн element-тэй таарж байгаа эсэхийг тооцож boolean утга буцаа.*/
+function ex11(arr) {
+  var sum = "";
+  for (var i = 0; i < arr.length - 1; i++) {
+    sum += arr[i];
+  }
+  if (sum === arr[arr.length - 1]) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(ex11(["a", "s", "d", "asd"]));
 /* Гараас стринг болон индекс өгөгдсөн бол, стринг дотроос өгөгдсөн индекс хүртэлх тэмдэгтүүдийг устгаж, үлдсэн стрингийг буцаах функц бич */
+function ex12(str, index) {
+  var ustgahStr = "";
+  var uldsenStr = "";
+  for (var i = 0; i <= index; i++) {
+    ustgahStr += str[i];
+  }
+  uldsenStr = str.replace(ustgahStr, "");
+  return uldsenStr;
+}
+console.log(ex12("asdf", 2));
 /* 2 ширхэг массив өгөгдсөн бол эхний массиваас зөвхөн сондгой, 2 дахь массиваас зөвхөн тэгш утгуудыг агуулсан шинэ массив үүсгэж буцаа. */
+function ex13(arr1, arr2) {
+  var newArray = [];
+  for (var i = 0; i < arr1.length; i++) {
+    if (arr1[i] % 2 === 1) {
+      newArray.push(arr1[i]);
+    }
+  }
+  for (var i = 0; i < arr2.length; i++) {
+    if (arr2[i] % 2 === 0) {
+      newArray.push(arr2[i]);
+    }
+  }
+  return newArray;
+}
+console.log(ex13([1, 2, 3, 4], [1, 2, 3, 4]));
 /* Өгөгдсөн тоог палиндром эсэхийг шалгах функц бич */
+function ex14(num) {
+  var hariu = false;
+  var numString = num.toString();
+  if (num === +numString.split("").reverse().join("")) {
+    hariu = true;
+  }
+  return hariu;
+}
+console.log(ex14(121));
