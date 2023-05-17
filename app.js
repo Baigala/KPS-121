@@ -436,7 +436,7 @@ var zoloo = {
 console.log("Minii ner bol " + zoloo.ner);
 
 /* 1. Ner, dugaar, email 3-н property-tai student1, student2, student3 objectuud uusgeed massiv dotor hiine. Promptoos email awj ali neg objectiin emailtai taarj bhin bol tuhain emailtai objectiig consoled hewle.*/
-/* 2. 99 || 95 || 85 || 94 dugaartai mobi hereglegcid baih yum bol mobiUsers massiv ruu hiine. */
+/* 2. 99 || 95 dugaartai mobi hereglegcid baih yum bol mobiUsers massiv ruu hiine. */
 var student1 = {
   ner: "a",
   dugaar: 99345565,
@@ -454,17 +454,24 @@ var student3 = {
 };
 var students = [student1, student2, student3];
 var oldson = false;
+var mobiUsers = [];
 var promptEmail = prompt("email ee oruulna uu.");
 if (promptEmail !== null) {
   for (var i = 0; i < students.length; i++) {
+    var dugaar = students[i].dugaar.toString();
     if (promptEmail === students[i].email) {
       console.log(students[i]);
       oldson = true;
     }
+    if (dugaar.slice(0, 2) == 99 || dugaar.slice(0, 2) == 95) {
+      mobiUsers.push(students[i]);
+    }
   }
+
   if (oldson === false) {
     console.log("iim emailtai hun bhku bna.");
   }
 } else {
   console.log("email ee oruulna uu?");
 }
+console.log(mobiUsers);
