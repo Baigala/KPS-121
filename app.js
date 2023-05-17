@@ -423,23 +423,48 @@ console.log(ex14(121));
 
 /* oбьект - object */
 // primitive, non-primitive - massiv, object
-var aa = [1, "aa", "5"];
-// {} - ugalzan haalt, blockon haalt
-// function, string, number, object, massiv
-var shiree = {
-  ongo: "tsagaan",
-  hemjee: {
-    urt: 2,
-    orgon: 1,
-  },
-  une: 50000,
-  taniltsuulga: function () {
-    console.log("hi");
+// { } - block haalt
+// number, string, function, object
+var zoloo = {
+  ner: "Zoljargal", // ner - property
+  nas: 25,
+  geriinHayg: {
+    hot: "UB",
+    duureg: "BGD",
   },
 };
-// propertygiin nereer tuhain objectiin utguud ruu handaj awna.
-console.log("Ene bol " + shiree.ongo + " ongotoi shiree.");
+console.log("Minii ner bol " + zoloo.ner);
 
 /* 1. Ner, dugaar, email 3-н property-tai student1, student2, student3 objectuud uusgeed massiv dotor hiine. Promptoos email awj ali neg objectiin emailtai taarj bhin bol tuhain emailtai objectiig consoled hewle.*/
 /* 2. 99 || 95 || 85 || 94 dugaartai mobi hereglegcid baih yum bol mobiUsers massiv ruu hiine. */
-
+var student1 = {
+  ner: "a",
+  dugaar: 99345565,
+  email: "a@gmail.com",
+};
+var student2 = {
+  ner: "b",
+  dugaar: 95345565,
+  email: "b@gmail.com",
+};
+var student3 = {
+  ner: "c",
+  dugaar: 88345565,
+  email: "c@gmail.com",
+};
+var students = [student1, student2, student3];
+var oldson = false;
+var promptEmail = prompt("email ee oruulna uu.");
+if (promptEmail !== null) {
+  for (var i = 0; i < students.length; i++) {
+    if (promptEmail === students[i].email) {
+      console.log(students[i]);
+      oldson = true;
+    }
+  }
+  if (oldson === false) {
+    console.log("iim emailtai hun bhku bna.");
+  }
+} else {
+  console.log("email ee oruulna uu?");
+}
