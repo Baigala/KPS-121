@@ -420,3 +420,26 @@ function ex14(num) {
   return hariu;
 }
 console.log(ex14(121));
+
+/* oбьект - object */
+// primitive, non-primitive - massiv, object
+var aa = [1, "aa", "5"];
+// {} - ugalzan haalt, blockon haalt
+// function, string, number, object, massiv
+var shiree = {
+  ongo: "tsagaan",
+  hemjee: {
+    urt: 2,
+    orgon: 1,
+  },
+  une: 50000,
+  taniltsuulga: function () {
+    console.log("hi");
+  },
+};
+// propertygiin nereer tuhain objectiin utguud ruu handaj awna.
+console.log("Ene bol " + shiree.ongo + " ongotoi shiree.");
+
+/* 1. Ner, dugaar, email 3-н property-tai student1, student2, student3 objectuud uusgeed massiv dotor hiine. Promptoos email awj ali neg objectiin emailtai taarj bhin bol tuhain emailtai objectiig consoled hewle.*/
+/* 2. 99 || 95 || 85 || 94 dugaartai mobi hereglegcid baih yum bol mobiUsers massiv ruu hiine. */
+
