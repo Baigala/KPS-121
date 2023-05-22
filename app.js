@@ -246,232 +246,361 @@ too[too.length - 1];
 // }
 // функц ашиглан бодно.
 /* Өгөгдсөн массив дотроос 5-д хуваагддаг тоонуудын нийлбэрийг олж буцаа */
-function ex1(arr) {
-  var sum = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] % 5 === 0) {
-      sum += arr[i];
-    }
-  }
-  return sum;
-}
-console.log(ex1([1, 10]));
+// function ex1(arr) {
+//   var sum = 0;
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] % 5 === 0) {
+//       sum += arr[i];
+//     }
+//   }
+//   return sum;
+// }
+// console.log(ex1([1, 10]));
 /* Өгөгдсөн массивын эхний болон сүүлийн элемент тэнцүү бол true, үгүй бол false буцаа */
-function ex2(arr) {
-  if (arr[0] === arr[arr.length - 1]) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function ex2(arr) {
+//   if (arr[0] === arr[arr.length - 1]) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 // console.log(ex2(["aa", 2, "aa"]));
 // console.log(ex2([6, 4, 3]));
 
 /* Гараас стринг өгөгдсөн бол тэгш индекс дээрх тэмдэгтүүдийг хэвлэх функц бич. */
-function ex3(str) {
-  for (var i = 0; i < str.length; i++) {
-    if (i % 2 === 0) {
-      console.log(str[i]);
-    }
-  }
-}
-ex3("asdfg");
+// function ex3(str) {
+//   for (var i = 0; i < str.length; i++) {
+//     if (i % 2 === 0) {
+//       console.log(str[i]);
+//     }
+//   }
+// }
+// ex3("asdfg");
 
 /* Дан boolean утгууд агуулсан массив өгөгдсөн бол, дотор нь нийт хэдэн ширхэг true утга байгааг олж буцаа. */
-function ex4(arr) {
-  var countTrue = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === true) {
-      countTrue++;
-    }
-  }
-  return countTrue;
-}
-console.log(ex4([true, true, true, true, true]));
+// function ex4(arr) {
+//   var countTrue = 0;
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] === true) {
+//       countTrue++;
+//     }
+//   }
+//   return countTrue;
+// }
+// console.log(ex4([true, true, true, true, true]));
 
 /* Массив өгөдсөн бол element тус бүрийг харгалзах indexeer нь үржүүлж үржвэрүүдийн нийлбэрийг буцаа. */
-function ex5(arr) {
-  var sum = 0;
-  for (var i = 0; i < arr.length; i++) {
-    sum += i * arr[i];
-  }
-  return sum;
-}
-console.log(ex5([2, 3, 4, 2]));
+// function ex5(arr) {
+//   var sum = 0;
+//   for (var i = 0; i < arr.length; i++) {
+//     sum += i * arr[i];
+//   }
+//   return sum;
+// }
+// console.log(ex5([2, 3, 4, 2]));
 
 // Gert:
 /* Массив дотор number болон string төрлийн тоонууд өгөгджээ. Зөвхөн number төрлийн тоонуудын нийлбэрийг олж буцаа. */
 // [1, "1", 3, "4"]
-function ex6(arr) {
-  var sum = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (typeof arr[i] == "number") {
-      sum += arr[i];
-    }
-  }
-  return sum;
-}
-console.log(ex6([2, 4, 4, "6"]));
+// function ex6(arr) {
+//   var sum = 0;
+//   for (var i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] == "number") {
+//       sum += arr[i];
+//     }
+//   }
+//   return sum;
+// }
+// console.log(ex6([2, 4, 4, "6"]));
 
 /* Массиваас element устгадаг функц бич. */
-function ex7(arr, ustgahElement) {
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === ustgahElement) {
-      arr.splice(i, 1);
-    }
-  }
-  return arr;
-}
-console.log(ex7([1, 2, 3, 4, "aa"], "aa"));
+// function ex7(arr, ustgahElement) {
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] === ustgahElement) {
+//       arr.splice(i, 1);
+//     }
+//   }
+//   return arr;
+// }
+// console.log(ex7([1, 2, 3, 4, "aa"], "aa"));
 /* String төрлийн тоо өгөгджээ. Бүх тэгш цифрүүдийн нийлбэрийг сондгой цифрүүдийн нийлбэртэй харьцуулж тэгш цифрүүдийн нийлбэр их бол тэгш цифрүүдийн нийлбэр их байна харин сондгой цифрүүдийн нийлбэр нь их байвал сондгой цифрүүдийн нийлбэр нь их хэрвээ тэнцүү байвал цифрүүдийн нийлбэр тэнцүү байна гэсэн утга буцаа.
 string төрлийн тоо ==> "1258" */
-function ex8(str) {
-  var tegshNiilber = 0;
-  var sondgoiNiilber = 0;
-  var hariu = "";
-  for (var i = 0; i < str.length; i++) {
-    if (str[i] % 2 === 0) {
-      tegshNiilber += +str[i];
-    } else {
-      sondgoiNiilber += +str[i];
-    }
-  }
-  if (tegshNiilber > sondgoiNiilber) {
-    hariu = "tegsh tsifruudiin niilber ih";
-  } else if (sondgoiNiilber > tegshNiilber) {
-    hariu = "sondgoi niilber ih";
-  } else {
-    hariu = "tentsuu.";
-  }
-  return hariu;
-}
-console.log(ex8("3234"));
+// function ex8(str) {
+//   var tegshNiilber = 0;
+//   var sondgoiNiilber = 0;
+//   var hariu = "";
+//   for (var i = 0; i < str.length; i++) {
+//     if (str[i] % 2 === 0) {
+//       tegshNiilber += +str[i];
+//     } else {
+//       sondgoiNiilber += +str[i];
+//     }
+//   }
+//   if (tegshNiilber > sondgoiNiilber) {
+//     hariu = "tegsh tsifruudiin niilber ih";
+//   } else if (sondgoiNiilber > tegshNiilber) {
+//     hariu = "sondgoi niilber ih";
+//   } else {
+//     hariu = "tentsuu.";
+//   }
+//   return hariu;
+// }
+// console.log(ex8("3234"));
 
 /* Өгөгдсөн массив дотор сондгой element болгон сондгой index агуулж, тэгш index болгон тэгш утга агуулж байвал тухайн massiv нь онцгой массив болно. Хэрэв онцгой массив таарвал true эсрэг тохиолдолд false утга буцаа.
 [4, 5, 2, 9, 2]; ==> онцгой массив */
-function ex9(arr) {
-  var ontsgoiElement = 0;
-  var bool;
-  for (var i = 0; i < arr.length; i++) {
-    if (
-      (i % 2 === 0 && arr[i] % 2 === 0) ||
-      (i % 2 === 1 && arr[i] % 2 === 1)
-    ) {
-      ontsgoiElement++;
-    }
-  }
-  if (ontsgoiElement === arr.length) {
-    bool = true;
-  } else {
-    bool = false;
-  }
-  return bool;
-}
-console.log(ex9([1, 5, 2, 9, 2]));
+// function ex9(arr) {
+//   var ontsgoiElement = 0;
+//   var bool;
+//   for (var i = 0; i < arr.length; i++) {
+//     if (
+//       (i % 2 === 0 && arr[i] % 2 === 0) ||
+//       (i % 2 === 1 && arr[i] % 2 === 1)
+//     ) {
+//       ontsgoiElement++;
+//     }
+//   }
+//   if (ontsgoiElement === arr.length) {
+//     bool = true;
+//   } else {
+//     bool = false;
+//   }
+//   return bool;
+// }
+// console.log(ex9([1, 5, 2, 9, 2]));
 /* Гараас стринг өгөгдсөн бол сондгой индекс дээрх тэмдэгтүүдийг хэвлэх функц бич. */
 
 /* Massiv дотор хамгийн сүүлийн element-ээс бусад бүх утгуудыг нэгтгэж, хамгийн сүүлийн element-тэй таарж байгаа эсэхийг тооцож boolean утга буцаа.*/
-function ex11(arr) {
-  var sum = "";
-  for (var i = 0; i < arr.length - 1; i++) {
-    sum += arr[i];
-  }
-  if (sum === arr[arr.length - 1]) {
-    return true;
-  } else {
-    return false;
-  }
-}
-console.log(ex11(["a", "s", "d", "asd"]));
+// function ex11(arr) {
+//   var sum = "";
+//   for (var i = 0; i < arr.length - 1; i++) {
+//     sum += arr[i];
+//   }
+//   if (sum === arr[arr.length - 1]) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(ex11(["a", "s", "d", "asd"]));
 /* Гараас стринг болон индекс өгөгдсөн бол, стринг дотроос өгөгдсөн индекс хүртэлх тэмдэгтүүдийг устгаж, үлдсэн стрингийг буцаах функц бич */
-function ex12(str, index) {
-  var ustgahStr = "";
-  var uldsenStr = "";
-  for (var i = 0; i <= index; i++) {
-    ustgahStr += str[i];
-  }
-  uldsenStr = str.replace(ustgahStr, "");
-  return uldsenStr;
-}
-console.log(ex12("asdf", 2));
+// function ex12(str, index) {
+//   var ustgahStr = "";
+//   var uldsenStr = "";
+//   for (var i = 0; i <= index; i++) {
+//     ustgahStr += str[i];
+//   }
+//   uldsenStr = str.replace(ustgahStr, "");
+//   return uldsenStr;
+// }
+// console.log(ex12("asdf", 2));
 /* 2 ширхэг массив өгөгдсөн бол эхний массиваас зөвхөн сондгой, 2 дахь массиваас зөвхөн тэгш утгуудыг агуулсан шинэ массив үүсгэж буцаа. */
-function ex13(arr1, arr2) {
-  var newArray = [];
-  for (var i = 0; i < arr1.length; i++) {
-    if (arr1[i] % 2 === 1) {
-      newArray.push(arr1[i]);
-    }
-  }
-  for (var i = 0; i < arr2.length; i++) {
-    if (arr2[i] % 2 === 0) {
-      newArray.push(arr2[i]);
-    }
-  }
-  return newArray;
-}
-console.log(ex13([1, 2, 3, 4], [1, 2, 3, 4]));
+// function ex13(arr1, arr2) {
+//   var newArray = [];
+//   for (var i = 0; i < arr1.length; i++) {
+//     if (arr1[i] % 2 === 1) {
+//       newArray.push(arr1[i]);
+//     }
+//   }
+//   for (var i = 0; i < arr2.length; i++) {
+//     if (arr2[i] % 2 === 0) {
+//       newArray.push(arr2[i]);
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(ex13([1, 2, 3, 4], [1, 2, 3, 4]));
 /* Өгөгдсөн тоог палиндром эсэхийг шалгах функц бич */
-function ex14(num) {
-  var hariu = false;
-  var numString = num.toString();
-  if (num === +numString.split("").reverse().join("")) {
-    hariu = true;
-  }
-  return hariu;
-}
-console.log(ex14(121));
+// function ex14(num) {
+//   var hariu = false;
+//   var numString = num.toString();
+//   if (num === +numString.split("").reverse().join("")) {
+//     hariu = true;
+//   }
+//   return hariu;
+// }
+// console.log(ex14(121));
 
 /* oбьект - object */
 // primitive, non-primitive - massiv, object
 // { } - block haalt
 // number, string, function, object
-var zoloo = {
-  ner: "Zoljargal", // ner - property
-  nas: 25,
-  geriinHayg: {
-    hot: "UB",
-    duureg: "BGD",
-  },
-};
-console.log("Minii ner bol " + zoloo.ner);
+// var zoloo = {
+//   ner: "Zoljargal", // ner - property
+//   nas: 25,
+//   geriinHayg: {
+//     hot: "UB",
+//     duureg: "BGD",
+//   },
+// };
+// console.log("Minii ner bol " + zoloo.ner);
 
 /* 1. Ner, dugaar, email 3-н property-tai student1, student2, student3 objectuud uusgeed massiv dotor hiine. Promptoos email awj ali neg objectiin emailtai taarj bhin bol tuhain emailtai objectiig consoled hewle.*/
 /* 2. 99 || 95 dugaartai mobi hereglegcid baih yum bol mobiUsers massiv ruu hiine. */
-var student1 = {
-  ner: "a",
-  dugaar: 99345565,
-  email: "a@gmail.com",
-};
-var student2 = {
-  ner: "b",
-  dugaar: 95345565,
-  email: "b@gmail.com",
-};
-var student3 = {
-  ner: "c",
-  dugaar: 88345565,
-  email: "c@gmail.com",
-};
-var students = [student1, student2, student3];
-var oldson = false;
-var mobiUsers = [];
-var promptEmail = prompt("email ee oruulna uu.");
-if (promptEmail !== null) {
-  for (var i = 0; i < students.length; i++) {
-    var dugaar = students[i].dugaar.toString();
-    if (promptEmail === students[i].email) {
-      console.log(students[i]);
-      oldson = true;
-    }
-    if (dugaar.slice(0, 2) == 99 || dugaar.slice(0, 2) == 95) {
-      mobiUsers.push(students[i]);
-    }
-  }
+// var student1 = {
+//   ner: "a",
+//   dugaar: 99345565,
+//   email: "a@gmail.com",
+// };
+// var student2 = {
+//   ner: "b",
+//   dugaar: 95345565,
+//   email: "b@gmail.com",
+// };
+// var student3 = {
+//   ner: "c",
+//   dugaar: 88345565,
+//   email: "c@gmail.com",
+// };
+// var students = [student1, student2, student3];
+// var oldson = false;
+// var mobiUsers = [];
+// var promptEmail = prompt("email ee oruulna uu.");
+// if (promptEmail !== null) {
+//   for (var i = 0; i < students.length; i++) {
+//     var dugaar = students[i].dugaar.toString();
+//     if (promptEmail === students[i].email) {
+//       console.log(students[i]);
+//       oldson = true;
+//     }
+//     if (dugaar.slice(0, 2) == 99 || dugaar.slice(0, 2) == 95) {
+//       mobiUsers.push(students[i]);
+//     }
+//   }
 
-  if (oldson === false) {
-    console.log("iim emailtai hun bhku bna.");
+//   if (oldson === false) {
+//     console.log("iim emailtai hun bhku bna.");
+//   }
+// } else {
+//   console.log("email ee oruulna uu?");
+// }
+// console.log(mobiUsers);
+
+/*Сэдэв: es6 нэмэлтүүд */
+/* №1. let, const */
+// let x = 0;
+// let x = 1;
+/* let түлхүүр үг ашиглан зарласан хувьсагчийг нэг орчинд дахиж зарлаж өгж болохгүй. */
+/* var түлхүүр үг ашиглан зарласан хувьсагч function дотроо хүчинтэй бол let -> block haalt дотроо хүчинтэй блокон хаалтнаас гадна дуудвал is not defined болсон байна. */
+// function dsfa() {
+//   for (let i = 0; i < 5; i++) {
+//     console.log(i);
+//   }
+//   console.log(i);
+// }
+// dsfa();
+/* const түлхүүр үг ашиглан зарласан хувьсагч доторх анхны утгыг нь өөрчилж болохгүй. Жишээ нь: Хүний овог нэр хадгалах, html таг барьж авах.*/
+// const ner = "Baigal";
+// ner = "Zoloo";
+// `` - backtick;
+let age = 10;
+const ner = "Baigal";
+console.log("Minii nas bol: " + age);
+console.log(`Minii nas bol:    ${age}`);
+console.log(`Minii ner bol: ${ner}`);
+
+/* №2. object дээрх нэмэлтүүд */
+// object-ийн function-ийг method гэж дуудна.
+// es6 дээр method-ийн : function түлхүүр үгийг нь хаяж бичнэ.
+const person1 = {
+  name: "Baigal",
+  walk: function () {
+    console.log(`${person1.name} walking`);
+  },
+  talk() {
+    console.log("talks dsfaf");
+  },
+};
+person1.talk();
+
+// №3. arrow functions - суман функц нь es6-c гарж ирсэн функцыг бичих илүү товч хялбар бичиглэл юм.
+// function-ийг зарлаж өгөхдөө ашигладаг function түлхүүр үгийг нь хасаад суман функц гэдгийн илэрхийлэхийн тулд => зааж өгнө. Хэрвээ ганц parameterын утгатай байхын бол () хаалтыг авахгүй байж болно. Мөн блокон хаалт дотор ганц мөртөй код байхаар бол return түлхүүр үг мөн {} ийг нь бичихгүй байж болно.
+// Жишээ 1:
+const zeregtDewshuul1 = function (number) {
+  return number * number;
+};
+const zeregtDewshuul2 = (number) => number * number;
+
+/* №4. Array-тай ажилладаг нэмэлт функцууд */
+
+// map - new array үүсгэнэ.
+// const colors = ["red", "green", "blue"];
+// const arr1 = colors.map((el) => "Энэ бол ийм өнгө: " + el);
+// const arr2 = colors.map(function (el) {
+//   return "Энэ бол ийм өнгө: " + el;
+// });
+// forEach
+const arr3 = ["a", "b", "c"];
+arr3.forEach((element) => {
+  if (element == "a") {
+    console.log(element);
   }
-} else {
-  console.log("email ee oruulna uu?");
-}
-console.log(mobiUsers);
+});
+arr3.forEach((el) => {
+  console.log(el);
+});
+// for (var i = 0; i < arr3.length; i++) {
+//   console.log(arr3[i]);
+// }
+// filter
+// const words = [
+//   "spray",
+//   "limit",
+//   "elite",
+//   "exuberant",
+//   "destruction",
+//   "present",
+// ];
+// const result = words.filter((word) => word.length > 6);
+// console.log(result);
+// console.log(words);
+// find
+const arr3a = [5, 12, 8, 130, 44];
+const found = arr3a.find((element) => element > 10);
+console.log(found);
+
+// findIndex
+const arr4 = [5, 12, 8, 130, 44];
+console.log(arr4.findIndex((element) => element > 13));
+
+// indexOf
+const beasts = ["ant", "bison", "aa", "duck", "bison"];
+console.log(beasts.indexOf("bison"));
+console.log(beasts.indexOf("bison", 2));
+console.log(beasts.indexOf("giraffe"));
+
+//some
+const arr6 = [1, 1, 3, 5, 4, 5];
+console.log(arr6.some((element) => element % 2 === 0));
+
+//every
+const arr7 = [1, 30, 4, 29, 30, 13];
+console.log(arr7.every((currentValue) => currentValue < 40));
+
+// №6. object destructuring
+const geriinHayag = {
+  uls: "Монгол",
+  hot: "УБ",
+  duureg: "БГД",
+};
+// const uls = geriinHayag.uls;
+// дээрх байдлаар хандаж хувьсагчинд хадгалсныг destructuring ашиглан доорх байдлаар бичнэ.
+// const { uls, hot } = geriinHayag;
+const { uls: country } = geriinHayag;
+
+// №7. Spread Operator
+const first = [1, 2, 3, 5];
+const second = [4, 5, 6];
+const negtgesenMassiv = first.concat(second);
+const spreadOperatorAshiglajNegtgesen = [...first, 4, 8, ...second];
+// Object дээр spread operator хэрэглэх нь:
+const toirog = {
+  radius: 10,
+  zuzaan: "10cm",
+};
+
+const ongotoiToirog = {
+  ...toirog,
+  color: "black",
+};
+console.log(ongotoiToirog);
