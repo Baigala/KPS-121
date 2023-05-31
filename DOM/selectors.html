@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .green {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DOM selectors -->
+    <input id="input" class="inputBla" type="text" />
+    <input id="colorInput" type="color" />
+    <button id="btn" onClick="myClick()">Click</button>
+    <div id="container"></div>
+    <!--  -->
+    <p class="child1 child">Paragraph 1</p>
+    <p class="child2 child">Paragraph 2</p>
+    <p class="child3 child">Paragraph 3</p>
+    <p class="child1 child">Paragraph 1</p>
+    <p class="child2 child">Paragraph 2</p>
+    <p class="child3 child">Paragraph 3</p>
+    <!--  -->
+    <button id="btn1">Random</button>
+    <div class="container"></div>
+    <script>
+      // tagiig const tulhuur ug ashiglaj zarlasan huwisagchin dotor hadgalna.
+      const inputElement = document.getElementById("input");
+      // const inputElement1 = document.querySelector(".inputBla");
+      // const inputElement2 = document.querySelector("#input");
+      // style ruu handah CamelCase
+      inputElement.style.border = "3px dashed red";
+      inputElement.style.backgroundColor = "green";
+      // innerHTML, innerText
+      const pTag1 = document.querySelector(".child1");
+      // pTag1.style.color = "red";
+      pTag1.innerText = "aaaa";
+      pTag1.innerHTML = "<p>asdfa</p>";
+      // classList, add()
+      pTag1.classList.add("green");
+      // querySelectorAll
+      const pTags = document.querySelectorAll(".child");
+      // for (var i = 0; i < pTags.length; i++) {
+      //   if (i % 2 === 0) {
+      //     pTags[i].style.backgroundColor = "red";
+      //   }
+      // }
+      // pTags.forEach((el, i) => {
+      //   if (i % 2 === 0) {
+      //     el.style.backgroundColor = "red";
+      //   }
+      // });
+      // querySelector, getElementById, querySelectorAll, style ruu handah, value, onClick(), innerHTML, innerText, classList, add()
+      function myClick() {
+        const container = document.getElementById("container");
+        const colorInput = document.getElementById("colorInput");
+        container.innerHTML += `<p style="color: ${colorInput.value}">${inputElement.value}</p>`;
+        inputElement.value = "";
+      }
+      // 3 ugtei massiv uusgeed button deer darah uyed random baidlaar ugiig delgetsend haruulna.
+      const btn1 = document.getElementById("btn1");
+      btn1.addEventListener("click", () => {
+        var words = ["hi", "hello", "bonjour"];
+        const container = document.querySelector(".container");
+        const randomIndex = Math.floor(Math.random() * 3);
+        container.innerHTML += `<p>${words[randomIndex]}</p>`;
+      });
+    </script>
+  </body>
+</html>

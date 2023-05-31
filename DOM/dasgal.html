@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Dasgal 1</h3>
+    <input id="text" type="text" placeholder="textee oruulna uu?" />
+    <input id="color" type="color" />
+    <input type="button" value="Insert" onclick="insertTextValue()" />
+    <div class="container"></div>
+    <script>
+      function insertTextValue() {
+        const inputElement = document.getElementById("text");
+        const colorInput = document.getElementById("color");
+        const container = document.querySelector(".container");
+        container.innerHTML += `<p style="color: ${colorInput.value}">${inputElement.value}</p>`;
+        inputElement.value = "";
+      }
+    </script>
+  </body>
+</html>

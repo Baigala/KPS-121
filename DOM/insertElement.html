@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="insert()">Insert</button>
+    <br />
+    <br />
+    <!-- beforebegin -->
+    <div class="container">
+      <!-- afterbegin -->
+      CONTAINER
+      <!-- beforeend -->
+    </div>
+    <!-- afterend -->
+    <script>
+      // beforebegin - before element
+      // afterbegin - first child
+      // beforeend - last child
+      // afterend - after element
+      function insert() {
+        const container = document.querySelector(".container");
+        container.insertAdjacentHTML(
+          "beforebegin",
+          `<p style="color: red">Inserted Text</p>`
+        );
+      }
+      // setTimeout
+      setTimeout(() => {
+        const container = document.querySelector(".container");
+        container.insertAdjacentHTML(
+          "beforebegin",
+          `<p style="color: red">Inserted Text</p>`
+        );
+      }, 2000);
+      // setInterval function
+      const myInterval = setInterval(() => {
+        const container = document.querySelector(".container");
+        container.insertAdjacentHTML(
+          "beforebegin",
+          `<p style="color: red">Inserted Text</p>`
+        );
+      }, 1000);
+      // clearInterval
+      //   clearInterval(myInterval);
+      //   01:04:59
+    </script>
+  </body>
+</html>
