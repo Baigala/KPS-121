@@ -66,19 +66,30 @@
       const sliders = document.querySelectorAll(".child");
       const prevBtn = document.getElementById("prev");
       const nextBtn = document.getElementById("next");
-      nextBtn.addEventListener("click", slide);
-      function slide() {
+      let index = 0;
+      nextBtn.addEventListener("click", next);
+      prevBtn.addEventListener("click", prev);
+      function next() {
         sliderShow(1);
+      }
+      function prev() {
+        sliderShow(-1);
       }
 
       function sliderShow(arg) {
         sliders.forEach((el, i) => {
           el.style.display = "none";
         });
-        let index = 0;
-        index += arg;
-        sliders[index].style.display = "block";
         console.log(index);
+        index += arg;
+        if (index === sliders.length) {
+          index = 0;
+        }
+        if (index === -1) {
+          index = 3;
+        }
+        console.log(index);
+        sliders[index].style.display = "block";
       }
     </script>
   </body>
