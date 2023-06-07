@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Байгуулагч функц ашиглан обьект үүсгэх.
+      // new
+      //   function Person(ner, email) {
+      //     this.ner = ner;
+      //     this.email = email;
+      //   }
+      //   Person.prototype.sayHi = function () {
+      //     console.log(`hi ${this.ner}`);
+      //   };
+      //   Person.prototype.changeName = function (nerOorchilson) {
+      //     return (this.ner = nerOorchilson);
+      //   };
+      //   const p1 = new Person("Gizmo", "gizmo@gmail.com");
+      //   const p2 = new Person("Zoloo", "zoloo@gmail.com");
+
+      // class
+      class Person1 {
+        constructor(name) {
+          this.ner = name;
+        }
+        sayHi() {
+          console.log(`hi ${this.ner}`);
+        }
+      }
+      const p1 = new Person1("Saraa");
+    </script>
+  </body>
+</html>

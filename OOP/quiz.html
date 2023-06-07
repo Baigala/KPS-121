@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Quiz {
+        constructor(asuult, bolomjitHariultuud, zowHariultiinIndex) {
+          this.asuult = asuult;
+          this.bolomjitHariultuud = bolomjitHariultuud;
+          this.zowHariultiinIndex = zowHariultiinIndex;
+        }
+
+        display() {
+          console.log(this.asuult);
+          for (var i = 0; i < this.bolomjitHariultuud.length; i++) {
+            console.log(`${i}) ${this.bolomjitHariultuud[i]}`);
+          }
+        }
+
+        isCorrectAnswer(answer) {
+          if (this.zowHariultiinIndex === answer) {
+            console.log("zow hariullaa");
+          } else {
+            console.log("buruu bna.");
+          }
+        }
+      }
+      const quiz1 = new Quiz("Aalz heden holtoi we?", [4, 8, 6, 10], 2);
+      const quiz2 = new Quiz(
+        "Mongol uls jiliin heden uliraltai we?",
+        [4, 5, 6, 2],
+        0
+      );
+      const quiz3 = new Quiz(
+        "Unegnii zulzagiig yu gej nerledeg we?",
+        ["beltreg", "golog", "gawar", "muujgai"],
+        2
+      );
+      let quizuud = [quiz1, quiz2, quiz3];
+
+      function next() {
+        if (quizuud.length === 0) {
+          console.log("duuslaa");
+        } else {
+          const randomIndex = Math.floor(Math.random() * quizuud.length);
+          quizuud[randomIndex].display();
+          const promptHariult = +prompt("zow hariultiin indexiig oruulna uu");
+          quizuud[randomIndex].isCorrectAnswer(promptHariult);
+          quizuud.splice(randomIndex, 1);
+          next();
+        }
+      }
+      next();
+    </script>
+  </body>
+</html>
